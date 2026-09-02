@@ -1,0 +1,88 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+body {
+    background: linear-gradient(145deg, #1e2b3c, #0f1722);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#game {
+    background: #2a3f54;
+    padding: 2rem 3rem;
+    border-radius: 40px;
+    box-shadow: 0 20px 30px rgba(0,0,0,0.6);
+    text-align: center;
+    color: white;
+    width: 500px;
+    max-width: 90%;
+}
+
+#game p {
+    font-size: 1.4rem;
+    margin: 0.5rem 0;
+}
+
+#score, #timer {
+    font-weight: bold;
+    color: #f9d342;
+    font-size: 2rem;
+}
+
+#target {
+    background: #f9d342;
+    border: none;
+    border-radius: 60px;
+    padding: 20px 30px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #1e2b3c;
+    cursor: pointer;
+    box-shadow: 0 8px 0 #b38f2a;
+    transition: all 0.05s ease;
+    margin: 20px 0;
+    width: 100%;
+    max-width: 300px;
+}
+
+#target:active {
+    transform: translateY(6px);
+    box-shadow: 0 2px 0 #b38f2a;
+}
+
+#target:disabled {
+    opacity: 0.5;
+    transform: translateY(4px);
+    box-shadow: 0 4px 0 #b38f2a;
+    cursor: not-allowed;
+}
+
+#reset {
+    background: #4a6a85;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 40px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+    margin-top: 10px;
+    box-shadow: 0 5px 0 #1e2b3c;
+}
+
+#reset:active {
+    transform: translateY(4px);
+    box-shadow: 0 1px 0 #1e2b3c;
+}
+
+#reset:hover {
+    background: #5d81a3;
+}
