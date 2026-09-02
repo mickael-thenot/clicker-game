@@ -4,7 +4,7 @@ const timerDisplay = document.getElementById('timer');
 const resetBtn = document.getElementById('reset')
 
 let score = 0
-let timeleft = 30
+let timeLeft = 30
 let gameActive = false
 let timerInterval = null;
 
@@ -12,7 +12,7 @@ let timerInterval = null;
 function moveTarget() {
     if (!gameActive) return;
 
-    const gameRect = document.getElementById('game').getBoundingClientRect();
+    const gameRect = document.getElementById('.game').getBoundingClientRect();
     const targetWidth = target.offsetWidth;
     const targetHeight = target.offsetHeight;
 
@@ -47,7 +47,7 @@ function startGame() {
 
     gameActive = true;
     score = 0;
-    timeleft = 30;
+    timeLeft = 30;
     scoreDisplay.textContent = score;
     timerDisplay.textContent = timeLeft;
     target.disabled = false;
@@ -66,6 +66,7 @@ function startGame() {
             timerInterval = null;
             gameActive = false;
             target.disabled = true;
+            target.textContent = 'Fin !'
             target.style.position = 'relative';
             target.style.left = 'auto';
             target.style.top = 'auto';
